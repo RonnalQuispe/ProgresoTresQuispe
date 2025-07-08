@@ -21,6 +21,10 @@
                 ContentTemplate="{DataTemplate views:RegistroPage}"
                 Route="RegistroPage" />
         </Tab>
+        <Tab Title="Logs">
+            <ShellContent ContentTemplate="{DataTemplate views:LogsPage}" />
+        </Tab>
+
     </TabBar>
 
 </Shell>
