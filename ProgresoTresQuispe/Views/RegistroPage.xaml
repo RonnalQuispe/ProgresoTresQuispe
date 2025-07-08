@@ -14,5 +14,7 @@
         <Entry Placeholder="Placa" Text="{Binding Placa}" />
         <Entry Placeholder="Año de Fabricación" Keyboard="Numeric" Text="{Binding AnioFabricacion}" />
         <Button Text="Guardar Vehículo" Command="{Binding GuardarCommand}" />
+        
+        
     </StackLayout>
 </ContentPage>
