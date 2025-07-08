@@ -3,13 +3,24 @@
     x:Class="ProgresoTresQuispe.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:ProgresoTresQuispe"
+    xmlns:views="clr-namespace:ProgresoTresQuispe.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="ProgresoTresQuispe">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <Tab Title="Inicio" Icon="home.png">
+            <ShellContent
+                Title="MainPage"
+                ContentTemplate="{DataTemplate views:MainPage}"
+                Route="MainPage" />
+        </Tab>
+
+        <Tab Title="Registrar" Icon="add.png">
+            <ShellContent
+                Title="Registro"
+                ContentTemplate="{DataTemplate views:RegistroPage}"
+                Route="RegistroPage" />
+        </Tab>
+    </TabBar>
 
 </Shell>

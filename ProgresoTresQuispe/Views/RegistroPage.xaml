@@ -1,0 +1,18 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:ProgresoTresQuispe.ViewModels"
+             x:Class="ProgresoTresQuispe.Views.RegistroPage"
+             Title="Ronny Quispe - 09/12/2001">
+
+    <ContentPage.BindingContext>
+        <viewmodels:RegistroViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="20">
+        <Entry Placeholder="Marca" Text="{Binding Marca}" />
+        <Entry Placeholder="Modelo" Text="{Binding Modelo}" />
+        <Entry Placeholder="Placa" Text="{Binding Placa}" />
+        <Entry Placeholder="Año de Fabricación" Keyboard="Numeric" Text="{Binding AnioFabricacion}" />
+        <Button Text="Guardar Vehículo" Command="{Binding GuardarCommand}" />
+    </StackLayout>
+</ContentPage>

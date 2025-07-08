@@ -1,17 +1,21 @@
 ﻿using SQLite;
 
-namespace ProgresoTresQuispe.Models
+namespace ProgresoTresQuispe.Models;
+
+[Table("vehiculos")]
+public class Vehiculo
 {
-    public class Vehiculo
-    {
-        [PrimaryKey, AutoIncrement]
-        public int Id { get; set; }
+    [PrimaryKey, AutoIncrement]
+    public int Id { get; set; }
 
-        public string Marca { get; set; }
-        public string Modelo { get; set; }
+    [MaxLength(100)]
+    public string Marca { get; set; }
 
-        public int AnioFabricacion { get; set; }
+    [MaxLength(100)]
+    public string Modelo { get; set; }
 
-        public string Placa { get; set; }
-    }
+    public int AnioFabricacion { get; set; }
+
+    [MaxLength(10), Unique]
+    public string Placa { get; set; }
 }
